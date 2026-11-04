@@ -14,59 +14,65 @@
   <link rel="icon" type="image/x-icon" href=""/>
   <title>Dean Kaski portfolio website</title>
   <style>
-    body {
+    .home-container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      gap: 0;
+      width: min(100% - 2rem, 200rem);
     }
 
-    header {
-      display: flex;
-      flex-direction: column;
-      gap: clamp(2rem, 6vw, 6rem);
+    .home-container > aside {
+      flex: 0 1 auto;
+      min-width: 0;
+      padding: clamp(2rem, 2vw, 2rem)
     }
 
-    .brand-link {
+    .home-container > section {
+      flex: 4;
+      min-width: 0;
+    }
+
+    .main-content-container {
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    }
+
+    .main-content-container > section {
+      flex: 1;
+      min-width:0;
+    }
+
+    .home-container > .main-content-container {
+      border-left: 1px solid black;
     }
     
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: min(100% - 2rem, 70rem);
-      margin-inline: auto;
-    }
-    
-    
-    nav ul {
-      display: flex;
-      gap: clamp(0.8rem, 2vw, 2.4rem);
-      list-style: none;
+    .main-content-container h2,
+    .main-content-container section,
+    .main-content-container section h2 {
+      padding-left: clamp(1rem, 2vw, 2rem);
     }
 
-    .titles{
+    .main-content-container > section + section {
+      border-left: 1px solid black;
+    }
+
+    .work-experience-container {
+      padding-bottom: clamp(3rem, 5vh, 6rem);
+    }
+
+
+    .home-container > aside,
+    .main-content-container > section {
+      padding-top: clamp(1rem, 2vh, 2rem);
+    }
+
+    footer {
       display: flex;
       flex-direction: column;
-      gap: 1vw;
-      text-align: center;
+      border-top: 0.1rem solid black;
     }
-
-    .titles h1 {
-      font-size: 5rem;
+    
+    .reviews-container {
+      display: flex;
     }
-
-    .titles p {
-      color: gray;
-    }
-
-    .titles h1,
-    .titles p {
-      margin: 0;
-    }
-
     </style>
 </head>
 <body>
@@ -90,7 +96,7 @@
       </div>
     </header>
   </section>
-  <main>
+  <main class="home-container">
     <aside>
       <h2>
         <strong>Projects</strong>
@@ -103,8 +109,8 @@
         <li><a href="">Product Upcoming Page</a></li>
       </ul>
     </aside>
-    <section>
-      <section>
+    <section class="main-content-container">
+      <section class="work-experience-container">
         <h2>Work Experience</h2>
         <section>
           <h3><em>roadmap.sh</em></h3>
@@ -140,33 +146,35 @@
   <footer>
     <section>
       <h2>Reviews from my Teachers</h2>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, repellat provident dolor dolorum exercitationem explicabo, eligendi voluptatem, earum magnam hic sint quia.
-        </p>
-        <ul>
-          <li>Jane doe</li>
-          <li>Assistant Professor</li>
-        </ul>
-      </section>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, repellat provident dolor dolorum exercitationem explicabo, eligendi voluptatem, earum magnam hic sint quia.
-        </p>
-        <ul>
-          <li>Jane doe</li>
-          <li>Assistant Professor</li>
-        </ul>
-      </section>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, repellat provident dolor dolorum exercitationem explicabo, eligendi voluptatem, earum magnam hic sint quia.
-        </p>
-        <ul>
-          <li>Jane doe</li>
-          <li>Assistant Professor</li>
-        </ul>
-      </section>
+      <div class="reviews-container">
+        <section>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, repellat provident dolor dolorum exercitationem explicabo, eligendi voluptatem, earum magnam hic sint quia.
+          </p>
+          <ul>
+            <li>Jane doe</li>
+            <li>Assistant Professor</li>
+          </ul>
+        </section>
+        <section>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, repellat provident dolor dolorum exercitationem explicabo, eligendi voluptatem, earum magnam hic sint quia.
+          </p>
+          <ul>
+            <li>Jane doe</li>
+            <li>Assistant Professor</li>
+          </ul>
+        </section>
+        <section>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, repellat provident dolor dolorum exercitationem explicabo, eligendi voluptatem, earum magnam hic sint quia.
+          </p>
+          <ul>
+            <li>Jane doe</li>
+            <li>Assistant Professor</li>
+          </ul>
+        </section>
+      </div>
     </section>
     <section>
       <p>all rights reserved to 2026</p>

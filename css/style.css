@@ -5,6 +5,67 @@
 html {
   font-size: 62.5%;
 }
+
  body {
   font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 0.5rem;
  }
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: clamp(0.8rem, 2vw, 2.4rem);
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.titles{
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  text-align: center;
+}
+
+.titles h1 {
+  font-size: 5rem;
+}
+
+.titles p {
+  color: gray;
+}
+
+.titles h1,
+.titles p {
+  margin: 0;
+}
+
+header {
+  border-bottom: 0.1rem solid black;
+  padding-bottom: clamp(8rem, 20vh, 20rem);
+}
