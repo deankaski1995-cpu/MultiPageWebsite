@@ -44,20 +44,23 @@
       border-left: 1px solid black;
     }
     
-    .main-content-container h2,
-    .main-content-container section,
-    .main-content-container section h2 {
-      padding-left: clamp(1rem, 2vw, 2rem);
-    }
-
+    
     .main-content-container > section + section {
       border-left: 1px solid black;
-    }
-
-    .work-experience-container {
       padding-bottom: clamp(3rem, 5vh, 6rem);
+      padding-inline: clamp(2rem, 5vw, 4rem);
+    }
+    
+    .experience-container-one {
+      border-bottom: 1px solid black;
+      padding-bottom: clamp(3rem, 5vh, 6rem);
+      padding-inline: clamp(2rem, 5vw, 4rem);
     }
 
+    .experience-container-two {
+      padding-bottom: clamp(3rem, 5vh, 6rem);
+      padding-inline: clamp(2rem, 5vw, 4rem);
+    }
 
     .home-container > aside,
     .main-content-container > section {
@@ -111,15 +114,17 @@
     </aside>
     <section class="main-content-container">
       <section class="work-experience-container">
-        <h2>Work Experience</h2>
-        <section>
-          <h3><em>roadmap.sh</em></h3>
-          <p>
-            Solved all the frontend projects
-          </p>
-          <a href="">Visit my Profile</a>
-        </section>
-        <section>
+        <div class="experience-container-one">
+          <h2>Work Experience</h2>
+          <section>
+            <h3><em>roadmap.sh</em></h3>
+            <p>
+              Solved all the frontend projects
+            </p>
+            <a href="">Visit my Profile</a>
+          </section>
+        </div>
+        <section class="experience-container-two">
           <h3><em>OpenSource Work</em></h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nihil, placeat deleniti praesentium incidunt exercitationem.
