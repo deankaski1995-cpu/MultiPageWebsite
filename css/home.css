@@ -63,3 +63,32 @@ aside li a {
 .main-content-container > section {
   padding-top: clamp(1rem, 2vh, 2rem);
 }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 0.1rem solid black;
+  padding-inline: clamp(1rem, 5vw, 4rem);
+}
+
+.reviews-container {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 2rem);
+}
+
+.reviews-container section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 1px solid black;
+  border-radius: 3rem;
+  padding: clamp(0.5rem, 4%, 2rem);
+}
+
+.reviews-container section ul {
+  color: gray;
+  margin-top: auto;
+}
+footer > section + section {
+  text-align: center;
+}

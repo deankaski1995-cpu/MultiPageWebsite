@@ -15,34 +15,73 @@
   <link rel="icon" type="image/x-icon" href=""/>
   <title>Dean Kaski portfolio website</title>
   <style>
-  footer {
-    display: flex;
-    flex-direction: column;
-    border-top: 0.1rem solid black;
-    padding-inline: clamp(1rem, 5vw, 4rem);
-  }
+    @media (max-width: 650px){
+      .home-container {
+        width: 100%;
+        flex-direction: column;
+      }
 
-  .reviews-container {
-    display: flex;
-    gap: clamp(0.5rem, 2vw, 2rem);
-  }
+      aside {
+        text-align: center;
+        flex: 1;
+        padding: 0;
+      }
 
-  .reviews-container section {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    border: 1px solid black;
-    border-radius: 3rem;
-    padding: clamp(0.5rem, 4%, 2rem);
-  }
+      aside ul {
+        margin: 0;
+        border-top: 1px solid black;
+      }
 
-  .reviews-container section ul {
-    color: gray;
-    margin-top: auto;
-  }
-  footer > section + section {
-    text-align: center;
-  }
+      aside li {
+        background-color: lightgray;
+      }
+
+      .home-container > .main-content-container {
+        border-left: none;
+      }
+
+      .main-content-container {
+        flex-direction: column;
+        text-align: left;
+        border-top: 1px solid black;
+      }
+
+      .main-content-container .work-experience-container{
+        padding-top: 0;
+      }
+      
+      .experience-container-one,
+      .experience-container-two {
+        background-color: lightgray;
+      }
+
+      .experience-container-one h2,
+      .experience-container-one h3,
+      .experience-container-two h3 {
+        margin: 0;
+      }
+
+      .experience-container-one h3,
+      .experience-container-two h3 {
+        padding-top: clamp(2rem, 1vh, 6rem);
+      }
+
+      .experience-title-container {
+        background-color: white;
+        margin-inline: calc(-1 * clamp(2rem, 5vw, 4rem));
+        padding: clamp(1rem, 2vh, 3rem);
+        text-align: center;
+        font-size: 1.2rem;
+        margin-block: 0;
+        border-bottom: 0.1rem solid black;
+      }
+
+      .main-content-container > section + section {
+        border-top: 1px solid black;
+        border-left: none;
+      }
+
+    }
   </style>
 </head>
 <body>
@@ -50,7 +89,7 @@
     <header>
       <nav>
         <a class="brand-link" href="index.html">
-          <img src="" alt="">
+          <img src="images/favicon-32x32.png" alt="">
           <p>Dean kaski</p>
         </a>
         <ul>
@@ -61,7 +100,7 @@
         </ul>
       </nav>
       <div class="titles">
-        <h1>Full-stak Developer</h1>
+        <h1>Full-stack Developer</h1>
         <p>html only with proper layout, no styling</p>
       </div>
     </header>
@@ -82,7 +121,9 @@
     <section class="main-content-container">
       <section class="work-experience-container">
         <div class="experience-container-one">
-          <h2>Work Experience</h2>
+          <div class="experience-title-container">
+            <h2>Work Experience</h2>
+          </div>
           <section>
             <h3><em>roadmap.sh</em></h3>
             <p>
