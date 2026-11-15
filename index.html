@@ -10,55 +10,137 @@
   <meta property="og:description" content="Dean Kaski portfolio website">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
   <link rel="icon" type="image/x-icon" href=""/>
   <title>Dean Kaski portfolio website</title>
+  <style>
+    @media (max-width: 650px){
+      .home-container {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      aside {
+        text-align: center;
+        flex: 1;
+        padding: 0;
+      }
+
+      aside ul {
+        margin: 0;
+        border-top: 1px solid black;
+      }
+
+      aside li {
+        background-color: lightgray;
+      }
+
+      .home-container > .main-content-container {
+        border-left: none;
+      }
+
+      .main-content-container {
+        flex-direction: column;
+        text-align: left;
+        border-top: 1px solid black;
+      }
+
+      .main-content-container .work-experience-container{
+        padding-top: 0;
+      }
+      
+      .experience-container-one,
+      .experience-container-two {
+        background-color: lightgray;
+      }
+
+      .experience-container-one h2,
+      .experience-container-one h3,
+      .experience-container-two h3 {
+        margin: 0;
+      }
+
+      .experience-container-one h3,
+      .experience-container-two h3 {
+        padding-top: clamp(2rem, 1vh, 6rem);
+      }
+
+      .experience-title-container {
+        background-color: white;
+        margin-inline: calc(-1 * clamp(2rem, 5vw, 4rem));
+        padding: clamp(1rem, 2vh, 3rem);
+        text-align: center;
+        font-size: 1.2rem;
+        margin-block: 0;
+        border-bottom: 0.1rem solid black;
+      }
+
+      .main-content-container > section + section {
+        border-top: 1px solid black;
+        border-left: none;
+      }
+
+      .reviews-container section:nth-child(n + 2) {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <section>
     <header>
       <nav>
-        <img src="" alt="">
-        <p>Dean kaski</p>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <a class="brand-link" href="index.html">
+          <img src="images/favicon-32x32.png" alt="">
+          <p>Dean kaski</p>
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
-      <h1>Full-stak Developer</h1>
-      <p>html only with proper layout, no styling</p>
+      <div class="titles">
+        <h1>Full-stack Developer</h1>
+        <p>html only with proper layout, no styling</p>
+      </div>
     </header>
   </section>
-  <main>
+  <main class="home-container">
     <aside>
       <h2>
         <strong>Projects</strong>
       </h2>
       <ul>
-        <li><a href="">HTML Only portfoli</a></li>
+        <li><a href="">HTML Only portfolio</a></li>
         <li><a href="">Calculator</a></li>
         <li><a href="">Quiz app</a></li>
         <li><a href="">Countdown Timer</a></li>
         <li><a href="">Product Upcoming Page</a></li>
       </ul>
     </aside>
-    <section>
-      <section>
-        <h2>Work Experience</h2>
-        <section>
-          <h3><em>roadmap.sh</em></h3>
-          <p>
-            Solved all the frontend projects
-          </p>
-          <a href="">Visit my Profile</a>
-        </section>
-        <section>
+    <section class="main-content-container">
+      <section class="work-experience-container">
+        <div class="experience-container-one">
+          <div class="experience-title-container">
+            <h2>Work Experience</h2>
+          </div>
+          <section>
+            <h3><em>roadmap.sh</em></h3>
+            <p>
+              Solved all the frontend projects
+            </p>
+            <a href=""><span>Visit my Profile</span></a>
+          </section>
+        </div>
+        <section class="experience-container-two">
           <h3><em>OpenSource Work</em></h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati nihil, placeat deleniti praesentium incidunt exercitationem.
           </p>
-          <a href="">Vist my GitHub Profile</a>
+          <a href=""><span>Vist my GitHub Profile</span></a>
         </section>
       </section>
       <section>
@@ -76,40 +158,43 @@
         </ul>
       </section>
     </section>
-    <section>
-  
-      <h2>Reviews from my Teachers</h2>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, repellat provident dolor dolorum exercitationem explicabo, eligendi voluptatem, earum magnam hic sint quia.
-        </p>
-        <ul>
-          <li>Jane doe</li>
-          <li>Assistant Professor</li>
-        </ul>
-      </section>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, repellat provident dolor dolorum exercitationem explicabo, eligendi voluptatem, earum magnam hic sint quia.
-        </p>
-        <ul>
-          <li>Jane doe</li>
-          <li>Assistant Professor</li>
-        </ul>
-      </section>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, repellat provident dolor dolorum exercitationem explicabo, eligendi voluptatem, earum magnam hic sint quia.
-        </p>
-        <ul>
-          <li>Jane doe</li>
-          <li>Assistant Professor</li>
-        </ul>
-      </section>
-    </section>
   </main>
   <footer>
-    <p>all rights reserved 2026</p>
+    <section>
+      <h2>Reviews from my Teachers</h2>
+      <div class="reviews-container">
+        <section>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at v
+          </p>
+          <ul>
+            <li>Jane doe</li>
+            <li>Assistant Professor</li>
+          </ul>
+        </section>
+        <section>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae
+          </p>
+          <ul>
+            <li>Jane doe</li>
+            <li>Assistant Professor</li>
+          </ul>
+        </section>
+        <section>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga esse beatae at voluptate est accusamus assumenda, re
+          </p>
+          <ul>
+            <li>Jane doe</li>
+            <li>Assistant Professor</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+    <section>
+      <p>all rights reserved to 2026</p>
+    </section>
   </footer>
 </body>
 </html>

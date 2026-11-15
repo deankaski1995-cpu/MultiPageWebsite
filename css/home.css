@@ -1,0 +1,94 @@
+.home-container {
+  display: flex;
+  gap: 0;
+  width: min(100% - 2rem, 200rem);
+}
+
+aside {
+  flex: 0 1 auto;
+  min-width: 0;
+  padding: clamp(2rem, 2vw, 2rem)
+}
+
+aside li + li {
+  border-top: 1px solid black;
+}
+
+aside li a {
+  display: block;
+  padding-block: clamp(0.75rem, 1.5vh, 1.25rem);
+}
+
+.home-container > section {
+  flex: 4;
+  min-width: 0;
+}
+
+.main-content-container {
+  display: flex;
+}
+
+.main-content-container > section {
+  flex: 1;
+  min-width:0;
+}
+
+.home-container > .main-content-container {
+  border-left: 1px solid black;
+}
+
+
+.main-content-container > section + section {
+  border-left: 1px solid black;
+  padding-bottom: clamp(3rem, 5vh, 6rem);
+  padding-inline: clamp(2rem, 5vw, 4rem);
+}
+
+.main-content-container span {
+  color: blue;
+}
+
+.experience-container-one {
+  border-bottom: 1px solid black;
+  padding-bottom: clamp(3rem, 5vh, 6rem);
+  padding-inline: clamp(2rem, 5vw, 4rem);
+}
+
+.experience-container-two {
+  padding-bottom: clamp(3rem, 5vh, 6rem);
+  padding-inline: clamp(2rem, 5vw, 4rem);
+}
+
+.home-container > aside,
+.main-content-container > section {
+  padding-top: clamp(1rem, 2vh, 2rem);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 0.1rem solid black;
+  padding-inline: clamp(1rem, 5vw, 4rem);
+}
+
+.reviews-container {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 2rem);
+}
+
+.reviews-container section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 1px solid black;
+  border-radius: 3rem;
+  padding: clamp(0.5rem, 4%, 2rem);
+}
+
+.reviews-container section ul {
+  color: gray;
+  margin-top: auto;
+}
+footer > section + section {
+  text-align: center;
+}
