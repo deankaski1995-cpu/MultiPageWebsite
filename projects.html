@@ -10,59 +10,154 @@
   <meta property="og:description" content="Dean Kaski portfolio website">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href=""/>
   <title>Dean Kaski portfolio website</title>
+  <style>
+    .site-header {
+      display: flex;
+      padding: 0;
+      text-align: center;
+    }
+
+    main > div > article:nth-of-type(odd) {
+      background-color: lightgray;
+    }
+
+    article {
+      padding-bottom: clamp(4rem, 2vh, 6rem);
+      border-bottom: 1px solid black;
+    }
+
+    article > * {
+      margin: 0;
+      padding-inline: clamp(2rem, 6vw, 8rem);
+    }
+    
+    article h2 {
+      padding-block: clamp(1.5rem, 2vh, 4rem);
+    }
+
+    article h3 {
+      padding-bottom: clamp(0.75rem, 2vh, 2rem);
+    }
+
+    article p,
+    article ul {
+      padding-bottom: clamp(1rem, 3vh, 3rem);
+    }
+
+    article a {
+      cursor: default;
+      color: blue;
+    }
+
+    article a span {
+      padding: 0;
+      cursor: pointer;
+    }
+    
+    footer {
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      main {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <section>
     <header>
       <nav>
-        <img src="" alt="">
-        <p>Dean kaski</p>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <a class="brand-link" href="index.html">
+          <img src="images/favicon-32x32.png" alt="">
+          <p>Dean kaski</p>
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
-      <h1>Full-stack Developer</h1>
-      <p>html only with proper layout, no styling</p>
+      <div class="titles">
+        <h1>Full-stack Developer</h1>
+        <p>html only with proper layout, no styling</p>
+      </div>
     </header>
   </section>
   <main>
-    <header>
+    <header class="site-header">
       <h1>Projects page</h1>
     </header>
-    <article>
-      <h2>Calculator</h2>
-      <p>
-        Project description
-      </p>
-      <a href="">project link</a>
-    </article>
-    <article>
-      <h2>Quiz App</h2>
-      <p>
-        Project description
-      </p>
-      <a href="">project link</a>
-    </article>
-    <article>
-      <h2>Countdown Timer</h2>
-      <p>
-        Project description
-      </p>
-      <a href="">project link</a>
-    </article>
-    <article>
-      <h2>Product Upcoming Page</h2>
-      <p>
-        Project description
-      </p>
-      <a href="">project link</a>
-    </article>
+    <div>
+      <article>
+        <h2>Calculator</h2>
+  
+        <h3>Project description</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt nulla recusandae esse eius voluptatum. Vero ipsam ratione perferendis reiciendis saepe? Iusto officia deserunt eaque ad libero, dolorum enim in reprehenderit!
+        </p>
+  
+        <h3>What it does or what it solves</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, beatae quam. Numquam facere aperiam esse quasi labore ullam, sunt perferendis veniam at quos temporibus ipsum omnis in quae ipsa perspiciatis.
+        </p>
+  
+        <h3>Built with</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <a href=""><span>project link</span></a>
+      </article>
+      <article>
+        <h2>Timer</h2>
+  
+        <h3>Project description</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt nulla recusandae esse eius voluptatum. Vero ipsam ratione perferendis reiciendis saepe? Iusto officia deserunt eaque ad libero, dolorum enim in reprehenderit!
+        </p>
+  
+        <h3>What it does or what it solves</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, beatae quam. Numquam facere aperiam esse quasi labore ullam, sunt perferendis veniam at quos temporibus ipsum omnis in quae ipsa perspiciatis.
+        </p>
+  
+        <h3>Built with</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <a href=""><span>project link</span></a>
+      </article>
+      <article>
+        <h2>Product Upcoming Page</h2>
+  
+        <h3>Project description</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt nulla recusandae esse eius voluptatum. Vero ipsam ratione perferendis reiciendis saepe? Iusto officia deserunt eaque ad libero, dolorum enim in reprehenderit!
+        </p>
+  
+        <h3>What it does or what it solves</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, beatae quam. Numquam facere aperiam esse quasi labore ullam, sunt perferendis veniam at quos temporibus ipsum omnis in quae ipsa perspiciatis.
+        </p>
+  
+        <h3>Built with</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <a href=""><span>project link</span></a>
+      </article>
+    </div>
   </main>
   <footer>
     <p>all rights reserved 2026</p>
