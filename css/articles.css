@@ -1,0 +1,41 @@
+.site-header {
+  display: flex;
+  padding: 0;
+  text-align: center;
+}
+
+main > div > article:nth-of-type(odd) {
+  background-color: lightgray;
+}
+
+article {
+  padding-bottom: clamp(3rem, 1.5vh, 5rem);
+  border-bottom: 1px solid black;
+}
+
+article > * {
+  margin: 0;
+  padding-inline: clamp(2rem, 6vw, 8rem);
+}
+
+article h2 {
+  padding-block: clamp(1.5rem, 2vh, 4rem);
+}
+
+article h3 {
+  padding-bottom: clamp(0.75rem, 2vh, 2rem);
+}
+
+article p {
+  padding-bottom: clamp(1rem, 3vh, 3rem);
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  main {
+    text-align: center;
+  }
+}
