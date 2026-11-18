@@ -14,8 +14,48 @@
   <link rel="icon" type="image/x-icon" href=""/>
   <title>Dean Kaski portfolio website</title>
 
-  <style>
+    <style>
+    .site-header {
+      display: flex;
+      padding: 0;
+      text-align: center;
+    }
+
+    main > div > article:nth-of-type(odd) {
+      background-color: lightgray;
+    }
+
+    article {
+      padding-bottom: clamp(3rem, 1.5vh, 5rem);
+      border-bottom: 1px solid black;
+    }
+
+    article > * {
+      margin: 0;
+      padding-inline: clamp(2rem, 6vw, 8rem);
+    }
     
+    article h2 {
+      padding-block: clamp(1.5rem, 2vh, 4rem);
+    }
+
+    article h3 {
+      padding-bottom: clamp(0.75rem, 2vh, 2rem);
+    }
+
+    article p {
+      padding-bottom: clamp(1rem, 3vh, 3rem);
+    }
+    
+    footer {
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      main {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -40,31 +80,35 @@
     </header>
   </section>
   <main>
-    <header>
-      <h1>Articles page</h1>
+    <header class="site-header">
+      <h1>Articles Page</h1>
     </header>
-
-    <article>
-      <h2>Articl Name</h2>
-      <h3>Author Name</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus rerum quidem aspernatur, voluptate aut alias nostrum nesciunt voluptates sed similique voluptas recusandae rem eum quae, magnam asperiores magni quam laudantium.
-      </p>
-    </article>
-    <article>
-      <h2>Article Name</h2>
-      <h3>Author Name</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus rerum quidem aspernatur, voluptate aut alias nostrum nesciunt voluptates sed similique voluptas recusandae rem eum quae, magnam asperiores magni quam laudantium.
-      </p>
-    </article>
-    <article>
-      <h2>Articl Name</h2>
-      <h3>Author Name</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus rerum quidem aspernatur, voluptate aut alias nostrum nesciunt voluptates sed similique voluptas recusandae rem eum quae, magnam asperiores magni quam laudantium.
-      </p>
-    </article>
+    <div>
+      <article>
+        <h2>Article Name</h2>
+  
+        <h3>Author Name</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt nulla recusandae esse eius voluptatum. Vero ipsam ratione perferendis reiciendis saepe? Iusto officia deserunt eaque ad libero, dolorum enim in reprehenderit!
+        </p>
+      </article>
+      <article>
+        <h2>Article Name</h2>
+  
+        <h3>Author Name</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt nulla recusandae esse eius voluptatum. Vero ipsam ratione perferendis reiciendis saepe? Iusto officia deserunt eaque ad libero, dolorum enim in reprehenderit!
+        </p>
+      </article>
+      <article>
+        <h2>Article Name</h2>
+  
+        <h3>Author Name</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt nulla recusandae esse eius voluptatum. Vero ipsam ratione perferendis reiciendis saepe? Iusto officia deserunt eaque ad libero, dolorum enim in reprehenderit!
+        </p>
+      </article>
+    </div>
   </main>
   <footer>
     <p>all rights reserved 2026</p>
